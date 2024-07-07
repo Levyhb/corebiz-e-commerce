@@ -1,3 +1,7 @@
+.header {
+  margin-bottom: 10px;
+}
+
 .header_wrapper {
   display: flex;
   padding: 7px 5px;
@@ -16,12 +20,12 @@
   height: 30px;
 }
 
-.shoppingCart {
+.shopping_cart {
   display: flex;
   align-items: center;
 }
 
-.shoppingCart .count {
+.shopping_cart .count {
   margin-left: 3px;
   font-size: 12px;
   background-color: #F8475F;
@@ -30,7 +34,7 @@
   color: white;
 }
 
-.shoppingCart img {
+.shopping_cart img {
   width: 25px;
   height: 25px;
 }

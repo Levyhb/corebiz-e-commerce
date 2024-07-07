@@ -1,0 +1,65 @@
+.footer_container {
+  color: white;
+  background: black;
+  padding: 5px 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.location h2 {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.line {
+  width: 40px;
+  height: 5px;
+  background-color: white;
+}
+
+.contact_btn {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  font-weight:  500;
+  font-size: 14px;
+  max-width: 220px;
+  margin: auto;
+  line-height: 12px;
+}
+
+.mail_btn {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.footer_logos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 5px 30px;
+}
+
+.corebiz_logo {
+  font-size: 12px;
+}
+
+.corebiz_logo img {
+  width: 80px;
+  height: 20px;
+}
+
+.vtex_logo {
+  width: 60px;
+  height: 35px;
+}
+

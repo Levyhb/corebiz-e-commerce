@@ -18,7 +18,7 @@ export default function Header() {
           <Image src={logo} alt="logo" />
         </div>
 
-        <div className={styles.shoppingCart}>
+        <div className={styles.shopping_cart}>
           <Image src={shoppingCart} alt="shopping-cart" />
           <div className={styles.count}>1</div>
         </div>
