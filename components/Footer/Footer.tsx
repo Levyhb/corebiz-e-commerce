@@ -20,14 +20,16 @@ export default function Footer() {
         <p>55 11 3090 1039</p>
       </div>
 
-      <div className={`${styles.mail_btn} ${styles.contact_btn}`}>
-        <EmailIcon />
-        <span>ENTRE EM CONTATO</span>
-      </div>
-
-      <div className={`${styles.call_btn} ${styles.contact_btn}`}>
-        <HeadsetMicIcon />
-        <span>FALE COM NOSSO CONSULTOR ONLINE</span>
+      <div>
+        <div className={`${styles.mail_btn} ${styles.contact_btn}`}>
+          <EmailIcon />
+          <span>ENTRE EM CONTATO</span>
+        </div>
+  
+        <div className={`${styles.call_btn} ${styles.contact_btn}`}>
+          <HeadsetMicIcon />
+          <span>FALE COM NOSSO CONSULTOR ONLINE</span>
+        </div>
       </div>
 
       <div className={styles.footer_logos}>

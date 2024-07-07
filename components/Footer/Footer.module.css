@@ -63,3 +63,14 @@
   height: 35px;
 }
 
+@media (min-width: 768px) {
+  .footer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footer_logos {
+    gap: 20px;
+  }
+}
