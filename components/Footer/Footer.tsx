@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Footer.module.css";
 import EmailIcon from "@mui/icons-material/Email";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
-import logo from "../../public/site-logo-corebiz-preto-cinza.png"
-import vtex from "../../public/vtex-logo.png"
+import logo from "../../public/site-logo-corebiz-preto-cinza.png";
+import vtex from "../../public/vtex-logo.png";
 
 import Image from "next/image";
 
@@ -25,7 +25,7 @@ export default function Footer() {
           <EmailIcon />
           <span>ENTRE EM CONTATO</span>
         </div>
-  
+
         <div className={`${styles.call_btn} ${styles.contact_btn}`}>
           <HeadsetMicIcon />
           <span>FALE COM NOSSO CONSULTOR ONLINE</span>
@@ -37,7 +37,7 @@ export default function Footer() {
           <p>Created by</p>
           <Image src={logo} alt="logo" />
         </div>
-        <Image src={vtex} alt="vtex-logo" className={styles.vtex_logo}/>
+        <Image src={vtex} alt="vtex-logo" className={styles.vtex_logo} />
       </div>
     </footer>
   );

@@ -5,7 +5,7 @@ import shoppingCart from "../../public/shopping-cart.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./Header.module.css";
 import SearchIcon from "@mui/icons-material/Search";
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { useMediaQuery } from "@mui/material";
 
 export default function Header() {
