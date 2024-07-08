@@ -6,6 +6,7 @@ import Carousel from "@/components/Carousel/Carousel";
 import { useMediaQuery } from "@mui/material";
 import carouselDesktopImage from "../public/carousel-desktop-image.png"
 import carouselMobileImage from "../public/carousel-mobile-image.png"
+import News from "@/components/News/News";
 
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <Carousel items={items}/>
+        <News/>
       </main>
     </>
   );

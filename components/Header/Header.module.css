@@ -67,24 +67,22 @@
 
 
 @media (min-width: 768px) {
-.logo img{
-  width: 130px;
-  height: 35px;
-}
+  .logo img{
+    width: 130px;
+    height: 35px;
+  }
 
-.header_wrapper {
-  width: 70%;
-  margin: auto;
-  padding-top: 10px;
-}
+  .header_wrapper {
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+  }
 
-.header_search {
-  width: 50%;
-}
+  .header_search {
+    width: 50%;
+  }
 
-.shopping_cart .count {
-  padding: 1px 5px;
-}
-
-
+  .shopping_cart .count {
+    padding: 1px 5px;
+  }
 }
