@@ -1,0 +1,57 @@
+.carousel_paper {
+  position: relative;
+}
+
+.title_container {
+  position: absolute;
+  top: 25%;
+  font-family: 'Nanito';
+  left: 8%;
+  color: white;
+  max-width: 250px;
+}
+
+.text1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .title_container {
+    top: 40%;
+    left: 10%;
+    max-width: 260px;
+  }
+
+  .text1 {
+    font-size: 20px;
+  }
+
+  .text2 {
+    font-size: 30px;
+  }
+
+}
+
+@media (min-width: 1444px) {
+  .title_container {
+    top: 40%;
+    left: 15%;
+  }
+
+  .text1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .text2 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+
+}

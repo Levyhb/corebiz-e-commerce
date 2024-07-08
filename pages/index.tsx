@@ -2,8 +2,32 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header/Header";
+import Carousel from "@/components/Carousel/Carousel";
+import { useMediaQuery } from "@mui/material";
+import carouselDesktopImage from "../public/carousel-desktop-image.png"
+import carouselMobileImage from "../public/carousel-mobile-image.png"
+
 
 export default function Home() {
+  const isDesktop = useMediaQuery("(min-width:768px)");
+
+  const items = [{
+    img: isDesktop ? carouselDesktopImage : carouselMobileImage,
+    text1: "Olá o que você está buscando?",
+    text2: "Criar ou migrar seu e-commerce?"
+  }, 
+  {
+    img: isDesktop ? carouselDesktopImage : carouselMobileImage,
+    text1: "Olá o que você está buscando?",
+    text2: "Criar ou migrar seu e-commerce?"
+  }, 
+  {
+    img: isDesktop ? carouselDesktopImage : carouselMobileImage,
+    text1: "Olá o que você está buscando?",
+    text2: "Criar ou migrar seu e-commerce?"
+  }, 
+]
+
   return (
     <>
       <Head>
@@ -13,6 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
+        <Carousel items={items}/>
       </main>
     </>
   );
