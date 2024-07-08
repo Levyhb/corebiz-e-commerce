@@ -42,6 +42,7 @@
   .title_container {
     top: 40%;
     left: 15%;
+    max-width: 350px;
   }
 
   .text1 {
