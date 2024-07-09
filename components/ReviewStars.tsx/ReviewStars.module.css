@@ -1,0 +1,17 @@
+.reviewStars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin: 10px 0 5px ; 
+}
+
+.reviewStars svg {
+  color: #F8475F;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .reviewStars svg {
+    font-size: 14px;
+  }
+}

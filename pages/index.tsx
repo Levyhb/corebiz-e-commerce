@@ -7,6 +7,7 @@ import { useMediaQuery } from "@mui/material";
 import carouselDesktopImage from "../public/carousel-desktop-image.png"
 import carouselMobileImage from "../public/carousel-mobile-image.png"
 import News from "@/components/News/News";
+import Products from "@/components/Products/Products";
 
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <Carousel items={items}/>
+        <Products />
         <News/>
       </main>
     </>
