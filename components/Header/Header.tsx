@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import shoppingCart from "../../public/shopping-cart.png";
@@ -7,9 +7,16 @@ import styles from "./Header.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { useMediaQuery } from "@mui/material";
+import { useCart } from "../../context/CartContext";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width:768px)");
+  const [cartQuantity, setCartQuantity] = useState(0);
+  const { cart }: any = useCart();
+
+  useEffect(() => {
+    setCartQuantity(cart.length)
+  }, [cart]);
 
   return (
     <header className={`${styles.header}`}>
@@ -39,7 +46,7 @@ export default function Header() {
 
         <div className={styles.shopping_cart}>
           <Image src={shoppingCart} alt="shopping-cart" />
-          <div className={styles.count}>1</div>
+          <div className={styles.count}>{cartQuantity}</div>
         </div>
       </div>
 

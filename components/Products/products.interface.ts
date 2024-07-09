@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 interface Installment {
   quantity: number;
   value: number;
@@ -5,11 +7,11 @@ interface Installment {
 
 export interface ProductsInterface {
   productId: number;
-  imageUrl: string;
-  title: string;
+  imageUrl: StaticImageData;
+  productName: string;
   stars: number;
-  listPrice: number;
+  listPrice?: number;
   price: number;
-  discount: string;
+  discount?: string;
   installments: Installment[];
 }

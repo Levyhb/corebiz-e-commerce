@@ -41,6 +41,10 @@
   height: 20px;
 }
 
+.shopping_cart:hover {
+  cursor: pointer;
+}
+
 .header_search {
   position: relative;
   padding: 0 20px;

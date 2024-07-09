@@ -6,11 +6,15 @@ import imageTest from "../../public/shoes.png";
 import ReviewStars from "../ReviewStars.tsx/ReviewStars";
 import flagOff from "../../public/flag-off.png";
 import { useMediaQuery } from "@mui/material";
+import { ProductsInterface } from "./products.interface";
+import { useCart } from "@/context/CartContext";
 
 export default function Products() {
   const isDesktop = useMediaQuery("(min-width:768px)");
-  const [selected, setSelected] = useState<boolean>(false);
-  const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
+  const [selectedProductIndex, setSelectedProductIndex] = useState<
+    number | null
+  >(null);
+  const { dispatch }: any = useCart();
 
   const settings = {
     dots: true,
@@ -22,7 +26,7 @@ export default function Products() {
     autoplaySpeed: 4000,
   };
 
-  const items = [
+  const items: ProductsInterface[] = [
     {
       productId: 2,
       productName: "SANDÁLIA LINHO BROWN",
@@ -87,47 +91,63 @@ export default function Products() {
     });
   };
 
+  const addToCart = (product: ProductsInterface) => {
+    dispatch({ type: "ADD_ITEM", payload: product });
+  };
+
   return (
     <div className={styles.product_container}>
       <h2>Mais Vendidos</h2>
       <div className={styles.line}></div>
       <Slider {...settings}>
-        {items.map((e, index) => (
+        {items.map((product, index) => (
           <div
-            key={e.productId}
+            key={product.productId}
             className={styles.product_card}
             onMouseEnter={() => setSelectedProductIndex(index)}
             onMouseLeave={() => setSelectedProductIndex(null)}
           >
             <Image
-              src={e.imageUrl}
-              alt={e.productName}
+              src={product.imageUrl}
+              alt={product.productName}
               className={styles.product_image}
             />
-            <p className={styles.product_name}>{e.productName}</p>
-            <ReviewStars stars={e.stars} />
+            <p className={styles.product_name}>{product.productName}</p>
+            <ReviewStars stars={product.stars} />
             <div className={styles.price_container}>
-              {e.listPrice ? (
+              {product.listPrice ? (
                 <span className={styles.list_price}>
-                  de {formatPrice(e.listPrice)}
+                  de {formatPrice(product.listPrice)}
                 </span>
               ) : (
                 <span className={styles.list_price_null}></span>
               )}
               <h3 className={styles.price}>
-                por <strong>{formatPrice(e.price)}</strong>
+                por <strong>{formatPrice(product.price)}</strong>
               </h3>
               <span className={styles.installments}>
-                ou em {e.installments[0].quantity}x de{" "}
-                {formatPrice(e.installments[0].value)}
+                ou em {product.installments[0].quantity}x de{" "}
+                {formatPrice(product.installments[0].value)}
               </span>
               {!isDesktop ? (
-                <button className={styles.buy_btn}>COMPRAR</button>
+                <button
+                  className={styles.buy_btn}
+                  onClick={() => addToCart(product)}
+                >
+                  COMPRAR
+                </button>
               ) : (
-                selectedProductIndex === index && <button className={styles.buy_btn}>COMPRAR</button>
+                selectedProductIndex === index && (
+                  <button
+                    className={styles.buy_btn}
+                    onClick={() => addToCart(product)}
+                  >
+                    COMPRAR
+                  </button>
+                )
               )}
             </div>
-            {e.listPrice && (
+            {product.listPrice && (
               <Image src={flagOff} alt="off flag" className={styles.flag_off} />
             )}
           </div>
