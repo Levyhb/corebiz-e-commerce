@@ -1,4 +1,4 @@
-# Corebiz Front End Test
+# corebiz Front End Test
 
 Teste técnico front-end para a empresa [Corebiz](https://www.corebiz.ag/pt/).
 ## Stack utilizada
