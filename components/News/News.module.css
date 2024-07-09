@@ -24,6 +24,7 @@
   font-size: 12px;
   border-radius: 5px;
   outline: none;
+  width: 100%;
 }
 
 .error_input {

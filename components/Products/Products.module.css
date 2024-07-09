@@ -4,6 +4,8 @@
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  width: 90%;
+  margin: auto;
 }
 
 .product_container h2 {
