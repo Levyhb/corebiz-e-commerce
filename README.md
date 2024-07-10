@@ -10,13 +10,13 @@ Teste técnico front-end para a empresa [Corebiz](https://www.corebiz.ag/pt/).
 Clonar o projeto
 
 ```bash
-  git clone git@github.com:Levyhb/Corebiz-e-commerce.git
+  git clone git@github.com:Levyhb/corebiz-e-commerce.git
 ```
 
 - Entre no diretório do projeto
 
 ```bash
-  cd Corebiz-e-commerce.git
+  cd corebiz-e-commerce.git
 
 ```
 
